@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audiclean"
+version = "0.1.0"
+description = "Audiclean project"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+audio = [
+    "torch==2.15.0",
+    "torchaudio==2.11.1",
+    "torchvision==0.29.2",
+    "numpy>=1.23.5,<2.0.0",
+    "librosa>=0.10.2",
+    "matplotlib>=3.8",
+]
+
+[project.scripts]
+audiclean = "scripts.main:main"
+
+[tool.setuptools.packages.find]
+include = ["scripts*"]
