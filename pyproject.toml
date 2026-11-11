@@ -19,7 +19,7 @@ audio = [
 ]
 
 [project.scripts]
-audiclean = "scripts.main:main"
+audiclean = "src.main:main"
 
 [tool.setuptools.packages.find]
-include = ["scripts*"]
+include = ["src*"]
